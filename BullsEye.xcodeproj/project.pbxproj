@@ -15,6 +15,8 @@
 		4A56D0B021576213002896E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A56D0AE21576213002896E2 /* LaunchScreen.storyboard */; };
 		4A56D0BB21576213002896E2 /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56D0BA21576213002896E2 /* BullsEyeTests.swift */; };
 		4A56D0C621576213002896E2 /* BullsEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56D0C521576213002896E2 /* BullsEyeUITests.swift */; };
+		4A56D0D4216449DE002896E2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56D0D3216449DE002896E2 /* AboutViewController.swift */; };
+		4A56D0D62166F2B9002896E2 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A56D0D52166F2B9002896E2 /* BullsEye.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		4A56D0C121576213002896E2 /* BullsEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A56D0C521576213002896E2 /* BullsEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeUITests.swift; sourceTree = "<group>"; };
 		4A56D0C721576213002896E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A56D0D3216449DE002896E2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		4A56D0D52166F2B9002896E2 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
+		4A56D0D7216ACF4A002896E2 /* BullsEye.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BullsEye.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +104,11 @@
 		4A56D0A121576211002896E2 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				4A56D0D7216ACF4A002896E2 /* BullsEye.entitlements */,
+				4A56D0D52166F2B9002896E2 /* BullsEye.html */,
 				4A56D0A221576211002896E2 /* AppDelegate.swift */,
 				4A56D0A421576211002896E2 /* ViewController.swift */,
+				4A56D0D3216449DE002896E2 /* AboutViewController.swift */,
 				4A56D0A621576211002896E2 /* Main.storyboard */,
 				4A56D0AC21576213002896E2 /* Assets.xcassets */,
 				4A56D0AE21576213002896E2 /* LaunchScreen.storyboard */,
@@ -196,6 +204,11 @@
 				TargetAttributes = {
 					4A56D09E21576211002896E2 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					4A56D0B521576213002896E2 = {
 						CreatedOnToolsVersion = 10.0;
@@ -233,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A56D0B021576213002896E2 /* LaunchScreen.storyboard in Resources */,
+				4A56D0D62166F2B9002896E2 /* BullsEye.html in Resources */,
 				4A56D0AD21576213002896E2 /* Assets.xcassets in Resources */,
 				4A56D0A821576211002896E2 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +275,7 @@
 			files = (
 				4A56D0AB21576211002896E2 /* BullsEye.xcdatamodeld in Sources */,
 				4A56D0A521576211002896E2 /* ViewController.swift in Sources */,
+				4A56D0D4216449DE002896E2 /* AboutViewController.swift in Sources */,
 				4A56D0A321576211002896E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,16 +451,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75Z798W89H;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = bing.BullsEye;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itu.Bull;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,16 +473,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75Z798W89H;
 				INFOPLIST_FILE = BullsEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = bing.BullsEye;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itu.Bull;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -471,7 +496,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75Z798W89H;
 				INFOPLIST_FILE = BullsEyeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -480,6 +507,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bing.BullsEyeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BullsEye.app/BullsEye";
@@ -491,7 +519,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75Z798W89H;
 				INFOPLIST_FILE = BullsEyeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,6 +530,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bing.BullsEyeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BullsEye.app/BullsEye";
@@ -510,7 +541,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75Z798W89H;
 				INFOPLIST_FILE = BullsEyeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,6 +552,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bing.BullsEyeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BullsEye;
@@ -529,7 +563,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75Z798W89H;
 				INFOPLIST_FILE = BullsEyeUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -538,6 +574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bing.BullsEyeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BullsEye;
